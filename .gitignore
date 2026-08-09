@@ -1,0 +1,15 @@
+# original photography, hundreds of megabytes and not needed to build the site
+individual photos/
+GroupP.jpg
+2026logo.png
+
+# the two reference wikis we studied, other teams' code
+example/
+
+# the roster spreadsheet, its contents already live in assets/team-data.js
+*.xlsx
+
+# build output that is not the published page
+share/_artifact-body.html
+
+.DS_Store
