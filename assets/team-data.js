@@ -66,11 +66,11 @@ const SECTIONS = [
     groups: [
     { title: "", members: [
       {
-        name: "Abby Kao", role: "Cross-Team Lead",
-        photo: "assets/members/abby-kao.jpg", funPhoto: "",
+        name: "Abigail Lin", role: "Wet Lab Lead",
+        photo: "assets/members/abigail-lin.jpg", funPhoto: "",
         grade: "Freshman", school: "KCIS", track: "Wet Lab", level: "Major",
-        bio: "Hey, I'm Abby! My favourite hobbies are dancing and experiencing different cultures around the world. Honestly, I am still surprised at how I found myself in this iGEM team, but through our hard work, I am very excited for what the future holds for us.",
-        own: ["Video"], mem: ["Lab", "Plant", "Education", "Art"]
+        bio: "Hi I'm Abigail! I love solving mystery novels, and to me, the plant world is the ultimate unsolved case. Outside of biology, I enjoy painting, diving, and scouting. I joined iGEM to explore the \"art\" of biological systems. Just like playing the cello, iGEM requires lots of harmony and creativity!",
+        own: ["Lab", "Cloning", "Plant", "Art"], mem: ["Education", "Video"]
       },
       {
         name: "Abby Tsai", role: "Wet Lab Lead",
@@ -80,11 +80,11 @@ const SECTIONS = [
         own: ["Lab", "Plant", "Art", "Video"], mem: ["Education"]
       },
       {
-        name: "Abigail Lin", role: "Wet Lab Lead",
-        photo: "assets/members/abigail-lin.jpg", funPhoto: "",
+        name: "Abby Kao", role: "Cross-Team Lead",
+        photo: "assets/members/abby-kao.jpg", funPhoto: "",
         grade: "Freshman", school: "KCIS", track: "Wet Lab", level: "Major",
-        bio: "Hi I'm Abigail! I love solving mystery novels, and to me, the plant world is the ultimate unsolved case. Outside of biology, I enjoy painting, diving, and scouting. I joined iGEM to explore the \"art\" of biological systems. Just like playing the cello, iGEM requires lots of harmony and creativity!",
-        own: ["Lab", "Cloning", "Plant", "Art"], mem: ["Education", "Video"]
+        bio: "Hey, I'm Abby! My favourite hobbies are dancing and experiencing different cultures around the world. Honestly, I am still surprised at how I found myself in this iGEM team, but through our hard work, I am very excited for what the future holds for us.",
+        own: ["Video"], mem: ["Lab", "Plant", "Education", "Art"]
       },
       {
         name: "Anton Lin", role: "Cross-Team Lead",
@@ -98,14 +98,14 @@ const SECTIONS = [
         photo: "assets/members/chloe-wu.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "Wet Lab", level: "Major",
         bio: "hey everyone, I'm Chloe!! In my free time, I love shopping, trying out new restaurants, and hanging out with my friends. I initially joined iGEM to learn more about synbio and explore my scientific passions, but I've come to learn that it's so much more than that - it is truly building a foundation for how I think, collaborate with others, and contribute towards creating a measurable difference in our lives.",
-        own: ["Lab", "Cloning"], mem: ["Outreach", "Entrepreneurship", "Video"]
+        own: ["Lab", "Cloning"], mem: ["Outreach", "Education", "Entrepreneurship", "Video"]
       },
       {
         name: "Jacquelyn Inocencio", role: "Cross-Team Lead",
         photo: "assets/members/jacquelyn-inocencio.jpg", funPhoto: "",
         grade: "Junior", school: "TAS", track: "Dry Lab", level: "Major",
         bio: "Hi! I’m Jacquelyn, and I joined iGEM because I’m really interested in using synthetic biology to create practical, real-world solutions. I love hands-on science and figuring out how ideas can actually work outside the lab. Outside the lab, I enjoy trying new food spots, hanging out with my friends, and shopping!",
-        own: ["Outreach", "Video", "Wiki"], mem: ["Education"]
+        own: ["Outreach", "Wiki"], mem: ["Education", "Video"]
       },
       {
         name: "Alex Li", role: "Wet Lab Vice Lead",
@@ -261,7 +261,7 @@ const SECTIONS = [
         photo: "assets/members/ryan-yuan.jpg", funPhoto: "",
         grade: "Sophomore", school: "KCIS", track: "Wet Lab", level: "Major",
         bio: "Hi, I'm Ryan Yuan! I enjoyed listening to R&B music and diving all around the volleyball court. I'm extremely passioante in both biology and chemistry and I hope the love can be fully shown into the effort of our iGEM team. It's been a pleasure to stay on the team as it teaches not only synthetic biology, but also on how to stand out as an individual and make a true difference.",
-        own: ["Lab", "Protectant"], mem: ["Entrepreneurship", "Video"]
+        own: ["Lab", "Protectant", "Video"], mem: ["Entrepreneurship"]
       },
       {
         name: "Sara Chen",
@@ -311,14 +311,14 @@ const SECTIONS = [
         name: "Caden Wu", role: "Student Advisor",
         photo: "assets/members/caden-wu.jpg", funPhoto: "",
         grade: "Junior", school: "TAS", track: "", level: "",
-        bio: "Hi, I'm Caden, and I'm an advisor for GEMS Taiwan. Following a great year as a drylab member from the 2025 team, I decided to return as an advisor to support the team any way possible by sharing my knowledge and experience.",
+        bio: "",
         own: [], mem: ["Education", "Wiki"]
       },
       {
         name: "Dylan Huang", role: "Student Advisor",
         photo: "assets/members/dylan-huang.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
-        bio: "Hi, I’m Dylan. I joined the iGEM team as an advisor because I’m genuinely interested in synthetic biology and enjoy working on projects that connect engineering and biology. I’m looking forward to supporting the team, learning from the process, and helping refine the science behind the project as it develops.",
+        bio: "",
         own: [], mem: ["Wiki", "Data Physicalization"]
       },
       {
@@ -332,14 +332,14 @@ const SECTIONS = [
         name: "Hachi Wu", role: "Student Advisor",
         photo: "assets/members/hachi-wu.jpg", funPhoto: "",
         grade: "Sophomore", school: "KCIS", track: "", level: "",
-        bio: "Hi, I'm Hachi, I was the project lead and wet-lab lead for Gems Taiwan 2025. My passion for synthetic biology has driven me to pursue iGEM for another round, but as an advisor to share experiences with new iGEMers. I look forward to supporting and working with the team, and build a meaningful project.",
+        bio: "",
         own: ["Video"], mem: ["Photography"]
       },
       {
         name: "Ian Cheng", role: "Student Advisor",
         photo: "assets/members/ian-cheng.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
-        bio: "Hi! I'm Ian, and I'm an advisor this year. I'm passionate about ecology and zoology, and I bring that same passion to synthetic biology as well. I hope to support the team through my wet lab knowledge, as well as my artistic ability.",
+        bio: "",
         own: [], mem: []
       },
       {
@@ -360,14 +360,14 @@ const SECTIONS = [
         name: "Oscar Huang", role: "Student Advisor",
         photo: "assets/members/oscar-huang.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
-        bio: "Hi I am Oscar a Sophmore at TAS and a current advisor for GEMS Taiwan. I was a former drylab member for the 2025 team, and I hope to bring meaningful impact to the team from what I have learned last year. I also hope to continue looking forward to the learning opportunities that Igem has to offer, whether that's teamwork or technical skills.",
+        bio: "",
         own: [], mem: ["Education", "Wiki"]
       },
       {
         name: "Venus Tay", role: "Student Advisor",
         photo: "assets/members/venus-tay.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
-        bio: "Hi! I’m Venus, a former project lead and wet-lab lead of the 2025 Gems Taiwan iGEM team. After an amazing experience last year, I chose to return as an advisor to support the 2026 team, share my wet-lab experience, and continue exploring the impact of synthetic biology together.",
+        bio: "",
         own: [], mem: ["Lab"]
       }
     ]},

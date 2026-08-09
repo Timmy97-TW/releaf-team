@@ -15,7 +15,7 @@ assets/members/*.jpg      45 portraits, cropped 4:5 at 720x900, about 70 KB each
 ```
 
 Open `team.html` in a browser. No build step, no dependencies, nothing loaded
-from another server. Stylesheets and scripts carry `?v=20`; bump that number
+from another server. Stylesheets and scripts carry `?v=21`; bump that number
 after you edit them if the browser hands you a stale copy.
 
 ## Where the design came from
@@ -65,9 +65,11 @@ Nineteen labels in total. To add another, put one line in `LABELS` at the top of
 Student Leaders is one grid, leads first, then vice leads. Each badge carries
 its own title, Wet Lab Lead, Dry Lab Vice Lead, Cross-Team Lead and so on.
 
-Names run alphabetically inside each block: the six leads, then the nine vice
-leads, then Student Members, then Student Advisors. Instructors keep the order
-you set, with Dr. Pak last.
+Student Members and Student Advisors run alphabetically, and so do the nine vice
+leads. The six leads sit in a hand-set order (Abigail Lin, Abby Tsai, Abby Kao,
+Anton Lin, then the rest alphabetically), so reorder those blocks in
+`team-data.js` rather than sorting them. Instructors keep the order you set,
+with Dr. Pak last.
 
 ## Subteam tracks
 
