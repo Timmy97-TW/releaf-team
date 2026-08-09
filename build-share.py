@@ -41,6 +41,22 @@ def inline_assets(text: str) -> str:
         return m.group(0).replace(rel, data_uri(f))
     return re.sub(r'(assets/[A-Za-z0-9_\-/.]+\.(?:jpg|jpeg|png|webp|svg|gif))', sub, text)
 
+def check(path: pathlib.Path):
+    """Catch a malformed bundle before it ships."""
+    t = path.read_text()
+    style = re.search(r"<style>(.*?)</style>", t, re.S)
+    if not style:
+        sys.exit("FAILED %s: no closed <style> block" % path.name)
+    for tag in ("</head>", "<body>", "</body>"):
+        if tag in style.group(1):
+            sys.exit("FAILED %s: %s ended up inside the stylesheet" % (path.name, tag))
+    for token in ("--nv-h:", "--nav-h:", "--leaf-700:"):
+        if token not in style.group(1):
+            sys.exit("FAILED %s: %s missing from the stylesheet" % (path.name, token))
+    if t.count("<script>") != 1 or t.count("</script>") != 1:
+        sys.exit("FAILED %s: expected exactly one script block" % path.name)
+
+
 def main():
     SHARE.mkdir(exist_ok=True)
 
@@ -86,16 +102,18 @@ def main():
     body  = re.sub(r'\s*<script src="[^"]*"></script>', '', body)
     body  = inline_assets(body).strip()
 
-    inner = ("<title>%s</title>\n<style>\n%s\n</style>\n\n%s\n\n<script>\n%s\n</script>\n"
-             % (title, css, body, js))
+    # Keep head and body as separate strings. An earlier version split the
+    # assembled string on its first blank line, which put </head><body> inside
+    # the stylesheet the moment the CSS itself contained one.
+    head_html = '<title>%s</title>\n<style>\n%s\n</style>' % (title, css)
+    body_html = '%s\n\n<script>\n%s\n</script>' % (body, js)
 
-    (SHARE / "_artifact-body.html").write_text(inner)
+    (SHARE / "_artifact-body.html").write_text(head_html + "\n\n" + body_html + "\n")
     (SHARE / "ReLeaf-team.html").write_text(
         '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
         '<meta charset="utf-8" />\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
-        + inner.split("\n\n", 1)[0] + "\n</head>\n<body>\n"
-        + inner.split("\n\n", 1)[1] + "\n</body>\n</html>\n")
+        + head_html + '\n</head>\n<body>\n' + body_html + '\n</body>\n</html>\n')
 
     # docs/index.html is what GitHub Pages publishes. noindex keeps a draft page
     # of students out of search results; delete that meta line when you want it
@@ -108,7 +126,8 @@ def main():
             '<meta name="robots" content="noindex, nofollow" />\n<meta name="viewport"', 1))
 
     for f in (SHARE / "ReLeaf-team.html", pub / "index.html", SHARE / "_artifact-body.html"):
-        print("  %-24s %5.1f MB" % (f.relative_to(ROOT), f.stat().st_size / 1024 / 1024))
+        check(f)
+        print("  %-24s %5.1f MB  ok" % (f.relative_to(ROOT), f.stat().st_size / 1024 / 1024))
 
 if __name__ == "__main__":
     print("Bundling the team page...")
