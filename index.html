@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Members | ReLeaf · iGEM 2026</title>
+  <meta name="description" content="Meet the students, advisors and instructors behind ReLeaf, a stress-responsive optogenetic bioreactor for precision plant protection." />
+  <!-- bump ?v= after editing the CSS/JS if your browser serves a stale copy -->
+  <link rel="stylesheet" href="assets/css/nav.css?v=21" />
+  <link rel="stylesheet" href="assets/css/team.css?v=21" />
+</head>
+<body>
+
+  <!-- ============================================================ NAVBAR -->
+  <div id="site-nav" data-tab="team" data-home="#" data-logo="assets/img/logo.png"></div>
+  <div class="sitenav-spacer"></div>
+
+  <!-- ========================================================= GROUP SHOT -->
+  <header class="hero">
+    <h1 class="visually-hidden">Team Members</h1>
+    <img class="hero__img" src="assets/img/group.jpg"
+         alt="The 2026 GEMS Taiwan ReLeaf team in matching green hoodies" />
+    <div class="hero__edge" aria-hidden="true"></div>
+  </header>
+
+  <!-- ======================================================= SECTION NAV -->
+  <div class="toolbar">
+    <nav class="toolbar__jump" id="jump-links" aria-label="Jump to section"></nav>
+  </div>
+
+  <!-- ============================================================== MAIN -->
+  <main id="team-main">
+    <noscript>
+      <div class="section">
+        <p class="section__note">This page builds its member cards with JavaScript. Please enable it, or see <code>assets/data/roster.js</code> for the full roster.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <!-- ============================================================= MODAL -->
+  <div class="modal" id="bio-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+    <div class="modal__frame" id="modal-frame">
+      <div class="modal__panel">
+        <button class="modal__close" aria-label="Close">×</button>
+        <img class="modal__media" src="" alt="" />
+        <div class="modal__body">
+          <div class="modal__sprig" id="modal-sprig" aria-hidden="true"></div>
+          <p class="modal__role"></p>
+          <h2 class="modal__name" id="modal-name"></h2>
+          <p class="modal__meta"></p>
+          <p class="modal__text"></p>
+          <div class="modal__tags card__tags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="footer">
+    <p>ReLeaf · GEMS Taiwan · iGEM 2026 · team member page prototype</p>
+  </footer>
+
+  <script src="assets/data/site-nav.js?v=21"></script>
+  <script src="assets/js/nav.js?v=21"></script>
+  <script src="assets/data/roster.js?v=21"></script>
+  <script src="assets/js/team.js?v=21"></script>
+</body>
+</html>

@@ -1,15 +1,10 @@
-# original photography, hundreds of megabytes and not needed to build the site
-individual photos/
-GroupP.jpg
-2026logo.png
+# Original material, kept locally and never committed. Hundreds of megabytes of
+# hi-res photography, the roster spreadsheet, and the two reference wikis we
+# studied, which are other teams' code.
+_source/
 
-# the two reference wikis we studied, other teams' code
-example/
-
-# the roster spreadsheet, its contents already live in assets/team-data.js
-*.xlsx
-
-# build output that is not the published page
-share/_artifact-body.html
+# Rebuildable output. docs/index.html is committed because Pages serves it;
+# these two are the same bundle and would only double the churn.
+dist/
 
 .DS_Store
