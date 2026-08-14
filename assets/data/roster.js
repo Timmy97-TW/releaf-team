@@ -358,7 +358,7 @@ const SECTIONS = [
         photo: "assets/img/members/neo-su.jpg", funPhoto: "",
         grade: "", school: "", track: "", level: "",
         bio: "",
-        own: [], mem: ["Bioreactor", "Hardware", "Wiki"]
+        own: ["Hardware"], mem: ["Bioreactor", "Wiki"]
       },
       {
         name: "Oscar Huang", role: "Student Advisor", hidden: true,
