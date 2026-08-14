@@ -106,6 +106,15 @@ There is deliberately no definition of a minor. The three columns say what a
 major has done; anything else is a minor, and the page does not need to spell
 that out.
 
+## Three optional fields on a person
+
+* `hidden: true` keeps someone in the roster but off the grid. Four advisors use
+  it: they are thanked by name in the line under the section instead.
+* `frame: "lead"` gives a card a lead's four-sided frame without giving it a
+  lead's title. Hachi Wu and Neo Su carry it.
+* `afterword` on a *section* renders a quiet line under the grid, in two parts,
+  `text` then `names`, so the names can sit in darker ink.
+
 ## Open project lead seats
 
 Project Leads shows four unclaimed seats rather than an empty box. Each is a
@@ -232,7 +241,8 @@ magick "_source/photos/NAME.jpg" -auto-orient -resize 720x900^ -gravity north -e
    table, so they sit under Student Advisors with their task pills kept.
 
 Roster: 15 student leaders, 16 student members, 10 student advisors,
-6 instructors. 47 people.
+6 instructors. 47 people, of whom 43 appear as cards; the other four advisors
+are named in the line under that section.
 
 **Cloning is owners only now.** Abigail Lin, Chloe Wu and Sophie Chen hold it,
 and nobody carries it as a member. The broader bench work moved to the new

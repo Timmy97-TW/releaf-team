@@ -269,6 +269,18 @@ main { padding-bottom: 5rem; }
 @media (min-width: 900px)  { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1120px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
+/* named, not carded: the quiet line under a grid */
+.section__after {
+  max-width: 62rem;
+  margin: 1.7rem 0 0;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgb(23 23 23 / .08);
+  font-size: .84rem;
+  line-height: 1.65;
+  color: var(--gray-600);
+}
+.section__afternames { color: var(--black); font-weight: 600; }
+
 .empty {
   border: 1px dashed var(--gray-300);
   border-radius: var(--radius);

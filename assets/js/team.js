@@ -108,7 +108,10 @@
 
   function buildCard(m) {
     const kind = roleKind(m.role);
-    const card = el("article", "card" + (kind === "lead" || kind === "vice" ? " card--" + kind : ""));
+    /* the frame usually follows the role, but `frame:` can lift someone who
+       carries a lead's weight without a lead's title */
+    const frame = m.frame || kind;
+    const card = el("article", "card" + (frame === "lead" || frame === "vice" ? " card--" + frame : ""));
     card.id = "member-" + slug(m.name);
     card.dataset.labels = tagsOf(m).map((t) => t.label).join("|");
 
@@ -214,13 +217,22 @@
       }
 
       (sec.groups || []).forEach((g) => {
-        if (!g.members || !g.members.length) return;
-        count += g.members.length;
+        const shown = (g.members || []).filter((m) => !m.hidden);
+        if (!shown.length) return;
+        count += shown.length;
         if (g.title) s.appendChild(el("h3", "group__title", g.title));
         const grid = el("div", "grid");
-        g.members.forEach((m) => grid.appendChild(buildCard(m)));
+        shown.forEach((m) => grid.appendChild(buildCard(m)));
         s.appendChild(grid);
       });
+
+      /* a thank-you for people who are named but not carded */
+      if (sec.afterword) {
+        const a = el("p", "section__after");
+        a.appendChild(document.createTextNode(sec.afterword.text + " "));
+        a.appendChild(el("span", "section__afternames", sec.afterword.names));
+        s.appendChild(a);
+      }
 
       /* a section with an explanatory note does not also need an empty box */
       if (!count && !sec.note) {

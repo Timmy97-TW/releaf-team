@@ -154,7 +154,7 @@ const SECTIONS = [
         photo: "assets/img/members/sophia-yeh.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "Wet Lab", level: "Major",
         bio: "Hi! I'm Sophia and I enjoy listening to music while studying subjects such as chemistry! I joined iGEM to learn more about synthetic biology and to collaborate with others to create a meaningful project that contributes to both scientific advancements and real-world problems.",
-        own: ["Protectant"], mem: ["Lab", "Peptide Design", "Entrepreneurship", "Video"]
+        own: ["Protectant"], mem: ["Lab", "Peptide Design", "Education", "Entrepreneurship", "Video"]
       },
       {
         name: "Sophie Chen", role: "Wet Lab Vice Lead",
@@ -168,7 +168,7 @@ const SECTIONS = [
         photo: "assets/img/members/sophie-liu.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "Wet Lab", level: "Major",
         bio: "Hi, I'm Sophie! I love listening to music, studying at cafes, and going out with my friends. I joined igem to collaborate with like-minded peers to work on a meaningful real-world project.",
-        own: ["Entrepreneurship", "Video"], mem: ["Lab", "Plant", "Model"]
+        own: ["Video"], mem: ["Lab", "Plant", "Model", "Education", "Entrepreneurship"]
       }
     ]},
     ]
@@ -254,7 +254,7 @@ const SECTIONS = [
         photo: "assets/img/members/ryan-wei.jpg", funPhoto: "",
         grade: "Junior", school: "FHJH", track: "Wet Lab", level: "Minor",
         bio: "Hi, I'm Ryan Wei! I love music and anime. I'm passionate of math and biology and I am looking forward to solve problems in the world using synthetic biology.",
-        own: [], mem: ["Lab", "Protectant"]
+        own: [], mem: ["Lab", "Protectant", "Education"]
       },
       {
         name: "Ryan Yuan",
@@ -289,7 +289,7 @@ const SECTIONS = [
         photo: "assets/img/members/sophie-huang.jpg", funPhoto: "",
         grade: "Freshman", school: "WEGO", track: "Wet Lab", level: "Major",
         bio: "Hi :), I'm Sophie Huang. I enjoy exploring the exciting, mysterious world of both biology and chemistry, and I hope to make more friends who are also interested in these and be more skilled at molecular cloning techniques. That's exactly why I chose to join iGEM. Outside of that, I also enjoy reading all kinds of books, watching movies, and collecting plushies.",
-        own: ["Lab Notebook"], mem: ["Lab", "Plant"]
+        own: ["Lab Notebook"], mem: ["Lab", "Plant", "Education"]
       }
     ]},
     ]
@@ -297,7 +297,11 @@ const SECTIONS = [
   {
     id: "advisors",
     title: "Student Advisors",
-    note: "None of our advisors are simply here to help out. Each of them brought the team something it did not already have: an initiative started from nothing, experimental technique passed down bench to bench, CAD work for the dry lab, wiki editing, photography, web design.",
+    afterword: {
+      text: "We also appreciate the contributions of the advisors who helped mostly online:",
+      names: "Caden Wu, Elizabeth Wong, Ian Cheng and Oscar Huang."
+    },
+    note: "Student advisors are not just here to help out. Each of them turned a year of experience into something the team did not have: an education site that finally strings our teaching work together across the years, the logistics and software behind advanced peptide design, a firmer structure for our videos, a photography initiative putting plant stress in front of a global audience through one distinct lens, and lab technique passed down bench to bench.",
     groups: [
     { title: "", members: [
       {
@@ -308,11 +312,11 @@ const SECTIONS = [
         own: [], mem: ["Protectant", "Peptide Design"]
       },
       {
-        name: "Caden Wu", role: "Student Advisor",
+        name: "Caden Wu", role: "Student Advisor", hidden: true,
         photo: "assets/img/members/caden-wu.jpg", funPhoto: "",
         grade: "Junior", school: "TAS", track: "", level: "",
         bio: "",
-        own: [], mem: ["Education", "Wiki"]
+        own: [], mem: ["Education"]
       },
       {
         name: "Dylan Huang", role: "Student Advisor",
@@ -322,21 +326,21 @@ const SECTIONS = [
         own: [], mem: ["Wiki", "Data Physicalization"]
       },
       {
-        name: "Elizabeth Wong", role: "Student Advisor",
+        name: "Elizabeth Wong", role: "Student Advisor", hidden: true,
         photo: "assets/img/members/elizabeth-wong.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
         bio: "",
         own: [], mem: ["Art"]
       },
       {
-        name: "Hachi Wu", role: "Student Advisor",
+        name: "Hachi Wu", role: "Student Advisor", frame: "lead",
         photo: "assets/img/members/hachi-wu.jpg", funPhoto: "",
         grade: "Sophomore", school: "KCIS", track: "", level: "",
         bio: "",
         own: ["Video"], mem: ["Photography"]
       },
       {
-        name: "Ian Cheng", role: "Student Advisor",
+        name: "Ian Cheng", role: "Student Advisor", hidden: true,
         photo: "assets/img/members/ian-cheng.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
         bio: "",
@@ -350,18 +354,18 @@ const SECTIONS = [
         own: [], mem: ["Photography", "Data Physicalization"]
       },
       {
-        name: "Neo Su", role: "Outstanding Advisor",
+        name: "Neo Su", role: "Student Advisor", frame: "lead",
         photo: "assets/img/members/neo-su.jpg", funPhoto: "",
         grade: "", school: "", track: "", level: "",
         bio: "",
         own: [], mem: ["Bioreactor", "Hardware", "Wiki"]
       },
       {
-        name: "Oscar Huang", role: "Student Advisor",
+        name: "Oscar Huang", role: "Student Advisor", hidden: true,
         photo: "assets/img/members/oscar-huang.jpg", funPhoto: "",
         grade: "Sophomore", school: "TAS", track: "", level: "",
         bio: "",
-        own: [], mem: ["Education", "Wiki"]
+        own: [], mem: ["Wiki"]
       },
       {
         name: "Venus Tay", role: "Student Advisor",
